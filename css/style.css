@@ -16,6 +16,7 @@ body {
     margin: 0;
     padding: 0;
     background-color:  #0e1012;
+    overflow-x: hidden;
 }
 
 .button {
@@ -38,5 +39,37 @@ body {
     position: relative;
     overflow: hidden;
 }
+
+.mobile-menu {
+  background-color: black;
+  position: absolute;
+  top:22%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* centers the element */
+  width: 80%;
+  height: 17%;
+  z-index: 9999;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* optional for better visibility */
+}
+
+
+.intro-wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 48px;
+    display: flex
+;
+}
+
+.intro-image-wrapper {
+    perspective: 1200px;
+    position: relative;
+    transform: perspective(1200px);
+    height: 5rem; 
+    width: 4rem;
+}
+
 
 

@@ -1,63 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guilia</title>
     <link rel="stylesheet" href="/css/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
 
 </head>
+
 <body>
-     <nav class="flex justify-between items-center px-10 py-4 bg-[#0e1012]/50 backdrop-blur-md">
-    <!-- Left nav -->
-    <ul class="flex gap-4">
-      <li><button class="button !text-periwinkle border-white border ">Stills</button></li>
-      <li><button class="button !text-periwinkle border-white border">Motion</button></li>
-      <li><button class="button !text-periwinkle border-white border">About</button></li>
-    </ul>
+    <nav>
+        <div class=" hidden md:flex justify-between items-center px-10 py-4 bg-[#0e1012]/50 backdrop-blur-md">
+            <!-- Left nav -->
+            <ul class="flex gap-4 ">
+                <li><button class="button !text-periwinkle border-white border ">Stills</button></li>
+                <li><button class="button !text-periwinkle border-white border">Motion</button></li>
+                <li><button class="button !text-periwinkle border-white border">About</button></li>
+            </ul>
 
-    <!-- Center title -->
-    <div class="text-white font-[customFont] text-3xl font-light">
-      Giulia
-    </div>
+            <!-- Center title -->
+            <div class="text-white font-[customFont] text-3xl font-light">
+                Giulia
+            </div>
 
-    <!-- Right nav -->
-    <ul class="flex gap-4">
-      <li><button class="button !text-periwinkle border-white border">Instagram</button></li>
-      <li><button class="button !text-periwinkle border-white border">Email</button></li>
-      <li><button class="button !text-periwinkle border-white border">F/24</button></li>
-    </ul>
-  </nav>
+            <!-- Right nav -->
+            <ul class="flex gap-4 ">
+                <li><button class="button !text-periwinkle border-white border">Instagram</button></li>
+                <li><button class="button !text-periwinkle border-white border">Email</button></li>
+                <li><button class="button !text-periwinkle border-white border gap-2 !pl-3 !px-0">F/24 <i
+                            class="ri-camera-lens-fill ri-3x"></i> </button></li>
+            </ul>
+        </div>
 
- <section id="hero" class="w-full relative rounded-md px-20">
-  <!-- Overlay -->
-  <div class="absolute inset-0 bg-black/10 z-10 rounded-[2.5rem]"></div>
+        <div class="md:hidden flex justify-between w-full p-4 px-6">
+            <div class="text-white font-[customFont] text-3xl font-light">
+                Giulia
+            </div>
+            <ul class="flex gap-4 ">
+                <li><button class="button !text-periwinkle border-white border gap-2 !pl-3 !px-0">F/24 <i
+                            class="ri-camera-lens-fill ri-3x"></i> </button></li>
+                <li><button class="button !text-periwinkle border-white border" id="menu">Menu</button></li>
+            </ul>
+        </div>
 
-  <!-- Text Over Video -->
-  <div class="absolute inset-0 z-20 flex items-center justify-center text-center">
-  <h1 class="text-white font-[customFont] uppercase text-[36px] md:text-[108px] leading-none ">
-    Giulia Gartner<br>
-    Photographer &<br>
-    Filmmaker
-  </h1>
-</div>
+        <div class="md:hidden mobile-menu flex   gap-4" id="mobile-menu">
+
+            <div class="w-[90%] items-center text-center">
+                <ul class="text-base font-[customFont] text-white ">Stills</ul>
+                <ul class="text-base font-[customFont] text-white ">Motion</ul>
+                <ul class="text-base font-[customFont] text-white ">About</ul>
+                <ul class="text-base font-[customFont] text-white ">Instagram</ul>
+                <ul class="text-base font-[customFont] text-white ">Email</ul>
+            </div>
+            <div class="w-[10%] text-end" id="close">
+                <i class="ri-close-line text-white ri-xl"></i>
+            </div>
+
+        </div>
+    </nav>
+
+    <section id="hero" class="relative w-full px-6 sm:px-8 md:px-20 py-10">
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-black/10 z-10 rounded-[1.5rem] sm:rounded-[2.5rem]"></div>
+        <!-- Text Over Video -->
+        <div class="absolute inset-0 z-20 flex items-center justify-center text-center px-4">
+            <h1 id="hero-text"
+                class="text-white font-[customFont] uppercase text-[28px] sm:text-[40px] md:text-[64px] lg:text-[108px] leading-none">
+                <div class="line">Giulia Gartner</div>
+                <div class="line">Photographer &</div>
+                <div class="line">Filmmaker</div>
+            </h1>
+        </div>
+
+        <!-- Video -->
+        <div class="h-[24rem] sm:h-[30rem] md:h-[35rem] overflow-hidden w-full">
+            <video src="./img/63600c288b483e9c7398616b_reel-transcode.webm" autoplay loop muted playsinline
+                class="w-full h-full object-cover rounded-[1.5rem] sm:rounded-[2.5rem]"></video>
+        </div>
+    </section>
 
 
-  <!-- Video -->
-  <div class="h-[35rem] overflow-hidden w-full">
-    <video
-      src="./img/63600c288b483e9c7398616b_reel-transcode.webm"
-      autoplay
-      loop
-      muted
-      playsinline
-      class="w-full h-full object-cover rounded-[2.5rem]"
-    ></video>
-  </div>
-</section>
+    <section id="text-section ">
+        <div class="intro-wrapper">
+            <div class="text-white font-[customFont] text-[88.33px]">
+            <h3>A &nbsp;</h3>
+            <div class="intro-image-wrapper"><img src="./img/61e939dee9c133675fbab858_Photo - Dolomites - 1-p-500.jpeg" alt=""></div>
+            <h3>tiny &nbsp;</h3>
+            <h3>mountain &nbsp;</h3>
+        </div>
+        <div class="intro-image-wrapper">
+            <img src="./img//61e939de8821f377935af4c3_Photo - Dolomites - 2-p-500.jpeg" alt="">
+        </div>
+        <h3>where &nbsp;</h3>
+        <h3>it &nbsp;</h3>
+        <h3>all &nbsp;</h3>
+        <h3>began &nbsp;</h3>
+        <div class="intro-image-wrapper"><img src="./img/61e939de8821f377935af4c3_Photo - Dolomites - 2-p-500.jpeg" alt=""></div>
+        </div>
+    </section>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="./app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+        integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"
+        integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./app.js"></script>
 </body>
+
 </html>
