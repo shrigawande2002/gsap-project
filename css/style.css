@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 @font-face {
     font-family: 'customFont';
     src: url('./../Font/60e4249bd8f95b37bea9f160_RoslindaleDisplayCondensed-Regular.woff2')format('woff2');
@@ -54,7 +56,6 @@ body {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* optional for better visibility */
 }
 
-
 .intro-wrapper {
     flex-wrap: wrap;
     justify-content: center;
@@ -69,6 +70,7 @@ body {
     height: 5rem; 
     width: 4rem;
 }
+
 
 
 
