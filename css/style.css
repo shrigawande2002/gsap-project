@@ -59,8 +59,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 48px;
-    display: flex
-;
+    display: flex;
 }
 
 .intro-image-wrapper {
