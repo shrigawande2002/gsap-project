@@ -2,6 +2,7 @@ const menuButton = document.getElementById("menu");
 const mobileMenu = document.getElementById("mobile-menu");
 const closeBtn = document.getElementById("close");
 var tl = gsap.timeline();
+gsap.registerPlugin(ScrollTrigger);
 
 // Initially hide the menu
 mobileMenu.style.display = "none";
@@ -142,4 +143,90 @@ gsap.from("#dot3", {
   yoyo: true,
   ease: "power1.inOut",
   delay: gap * 2
+});
+
+gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
+
+// First Section
+gsap.set("#card-img-left", { x: 0 });
+gsap.set("#card-img-right", { x: 0 });
+
+gsap.to("#card-img-left", {
+  x: -800,
+  rotate: -5,
+  ease: "power2.inOut",
+  scrollTrigger: {
+    trigger: "#cards",
+    start: "top top",
+    end: "+=500",
+    scrub: 3,
+    pin: true,
+
+  },
+});
+
+gsap.to("#card-img-right", {
+  x: 800,
+  rotate: 5,
+  ease: "power2.inOut",
+  scrollTrigger: {
+    trigger: "#cards",
+    start: "top top",
+    end: "+=500",
+    scrub: 3,
+  },
+});
+
+gsap.from("#content", {
+  opacity: 0,
+  y: 50,
+  ease: "power2.out",
+  scrollTrigger: {
+    trigger: "#cards",
+    start: "top top",
+    end: "+=500",
+    scrub: 3,
+  },
+});
+
+// Second Section
+gsap.set("#card-img-left2", { x: 0 });
+gsap.set("#card-img-right2", { x: 0 });
+
+gsap.to("#card-img-left2", {
+  x: -800,
+  rotate: -5,
+  ease: "power2.inOut",
+  scrollTrigger: {
+    trigger: "#cards2",
+    start: "top top",
+    end: "+=500",
+    scrub: 3,
+    pin: true,
+  },
+});
+
+gsap.to("#card-img-right2", {
+  x: 800,
+  rotate: 5,
+  ease: "power2.inOut",
+  scrollTrigger: {
+    trigger: "#cards2",
+    start: "top top",
+    end: "+=500",
+    scrub: 3,
+  },
+});
+
+gsap.from("#content2", {
+  opacity: 0,
+  y: 50,
+  ease: "power2.out",
+  scrollTrigger: {
+    trigger: "#cards2",
+    start: "top top",
+    end: "+=500",
+    scrub: 3,
+  },
 });
