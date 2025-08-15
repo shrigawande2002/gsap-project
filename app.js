@@ -243,6 +243,38 @@ mm.add("(min-width: 769px)", () => {
 });
 
 
+const images = document.querySelectorAll(".paralex-section-imgs img");
+
+images.forEach((img) => {
+  img.addEventListener("mousemove", (e) => {
+    const rect = img.getBoundingClientRect();
+    const offsetX = e.clientX - rect.left;
+    const moveRange = 30; // horizontal reveal range
+
+    // Calculate horizontal movement (-15px to +15px)
+    const moveX = ((offsetX / rect.width) - 0.5) * -moveRange;
+
+    gsap.to(img, {
+      x: moveX,
+      y: 0, // no vertical movement
+      rotateY: moveX * 0.5, // slight 3D tilt
+      duration: 0.4,
+      ease: "power2.out"
+    });
+  });
+
+  img.addEventListener("mouseleave", () => {
+    gsap.to(img, {
+      x: 0,
+      y: 0,
+      rotateY: 0,
+      duration: 0.5,
+      ease: "power3.out"
+    });
+  });
+});
+
+
 
 
 
